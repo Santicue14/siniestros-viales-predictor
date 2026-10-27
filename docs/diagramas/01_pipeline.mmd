@@ -1,0 +1,11 @@
+flowchart TD
+    limpio["CSV limpio, 65818 hechos"] --> split["Split estratificado 80/20"]
+    split --> train["Entrenamiento, 52654 filas"]
+    split --> test["Prueba, 13164 filas"]
+    train --> hora["Indicador de hora faltante"]
+    hora --> encode["Dummies de comuna, vía, modo y contraparte"]
+    encode --> scale["StandardScaler ajustado solo en el entrenamiento"]
+    scale --> pesos["Pesos de clase"]
+    pesos --> matrizTrain["Matriz de entrenamiento, 54 columnas"]
+    test --> aplicar["El mismo pipeline, sin reajustar"]
+    aplicar --> matrizTest["Matriz de prueba, 54 columnas"]

@@ -1,0 +1,161 @@
+{
+  "elegido": "random_forest",
+  "clases": [
+    "LEVE",
+    "GRAVE",
+    "MORTAL"
+  ],
+  "criterio": "mayor recall macro en la prueba; desempate por recall del mortal y después del grave",
+  "hiperparametros": {
+    "regresion_logistica": {
+      "max_iter": 1000,
+      "class_weight": "pesos del entrenamiento",
+      "random_state": 42
+    },
+    "arbol": {
+      "max_depth": 5,
+      "min_samples_leaf": 20,
+      "class_weight": "pesos del entrenamiento",
+      "random_state": 42
+    },
+    "random_forest": {
+      "n_estimators": 200,
+      "max_depth": 8,
+      "min_samples_leaf": 10,
+      "class_weight": "pesos del entrenamiento",
+      "random_state": 42
+    }
+  },
+  "prueba": {
+    "filas": 13164,
+    "por_nivel": {
+      "LEVE": 12435,
+      "GRAVE": 591,
+      "MORTAL": 138
+    }
+  },
+  "modelos": [
+    {
+      "modelo": "siempre_leve",
+      "acierto": 0.9446216955332726,
+      "recall_macro": 0.3333333333333333,
+      "f1_macro": 0.3238407750302746,
+      "recall_leve": 1.0,
+      "recall_grave": 0.0,
+      "recall_mortal": 0.0,
+      "precision_grave": 0.0,
+      "precision_mortal": 0.0,
+      "f1_grave": 0.0,
+      "f1_mortal": 0.0
+    },
+    {
+      "modelo": "regresion_logistica",
+      "acierto": 0.5922212093588575,
+      "recall_macro": 0.6169512199847653,
+      "f1_macro": 0.32579402533938784,
+      "recall_leve": 0.594692400482509,
+      "recall_grave": 0.5025380710659898,
+      "recall_mortal": 0.7536231884057971,
+      "precision_grave": 0.08603707995365006,
+      "precision_mortal": 0.04779411764705882,
+      "f1_grave": 0.1469206035122434,
+      "f1_mortal": 0.0898876404494382
+    },
+    {
+      "modelo": "arbol",
+      "acierto": 0.6573989668793679,
+      "recall_macro": 0.5726939239493021,
+      "f1_macro": 0.35051989536625844,
+      "recall_leve": 0.677362283876156,
+      "recall_grave": 0.19289340101522842,
+      "recall_mortal": 0.8478260869565217,
+      "precision_grave": 0.19826086956521738,
+      "precision_mortal": 0.02980891719745223,
+      "f1_grave": 0.1955403087478559,
+      "f1_mortal": 0.0575929116416441
+    },
+    {
+      "modelo": "random_forest",
+      "acierto": 0.5477058644788818,
+      "recall_macro": 0.6210139529052877,
+      "f1_macro": 0.30713234683760066,
+      "recall_leve": 0.5482106956172095,
+      "recall_grave": 0.467005076142132,
+      "recall_mortal": 0.8478260869565217,
+      "precision_grave": 0.08160851567120048,
+      "precision_mortal": 0.04082344731332868,
+      "f1_grave": 0.13893783035489554,
+      "f1_mortal": 0.07789613848202397
+    }
+  ],
+  "matrices": {
+    "siempre_leve": [
+      [
+        12435,
+        0,
+        0
+      ],
+      [
+        591,
+        0,
+        0
+      ],
+      [
+        138,
+        0,
+        0
+      ]
+    ],
+    "regresion_logistica": [
+      [
+        7395,
+        3133,
+        1907
+      ],
+      [
+        129,
+        297,
+        165
+      ],
+      [
+        12,
+        22,
+        104
+      ]
+    ],
+    "arbol": [
+      [
+        8423,
+        461,
+        3551
+      ],
+      [
+        220,
+        114,
+        257
+      ],
+      [
+        21,
+        0,
+        117
+      ]
+    ],
+    "random_forest": [
+      [
+        6817,
+        3091,
+        2527
+      ],
+      [
+        93,
+        276,
+        222
+      ],
+      [
+        6,
+        15,
+        117
+      ]
+    ]
+  }
+}

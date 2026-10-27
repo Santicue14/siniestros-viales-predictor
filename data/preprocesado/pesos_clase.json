@@ -1,0 +1,13 @@
+{
+  "formula": "n / (3 * n_clase), calculado en el entrenamiento",
+  "niveles": [
+    "LEVE",
+    "GRAVE",
+    "MORTAL"
+  ],
+  "pesos": {
+    "LEVE": 0.35286864097254333,
+    "GRAVE": 7.424421883812747,
+    "MORTAL": 31.85359951603146
+  }
+}

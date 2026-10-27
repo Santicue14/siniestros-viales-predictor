@@ -1,0 +1,9 @@
+flowchart TD
+    falta["Valor faltante"] --> tipo{"De qué columna se trata"}
+    tipo --> cat["Modo, vía, comuna o contraparte"]
+    tipo --> hora["Hora"]
+    tipo --> coord["Latitud y longitud"]
+    cat --> sindato["Se deja la categoría SIN_DATO. No hay media."]
+    hora --> comparar["Se comparan media, mediana e indicador"]
+    comparar --> indicador["Se guarda hora_faltante. No se asignan las 14."]
+    coord --> fuera["No entran a esta matriz"]

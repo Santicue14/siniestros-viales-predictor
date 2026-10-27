@@ -1,0 +1,8 @@
+{
+  "name": "diagramas-informe",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "pele": "^1.0.0"
+  }
+}

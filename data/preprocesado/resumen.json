@@ -1,0 +1,23 @@
+{
+  "filas": 65818,
+  "niveles": {
+    "LEVE": 62174,
+    "GRAVE": 2955,
+    "MORTAL": 689
+  },
+  "entrenamiento": 52654,
+  "prueba": 13164,
+  "entrenamiento_por_nivel": {
+    "LEVE": 49739,
+    "GRAVE": 2364,
+    "MORTAL": 551
+  },
+  "media_hora_entrenamiento": 13.639834940194344,
+  "mediana_hora_entrenamiento": 14.0,
+  "pesos": {
+    "LEVE": 0.35286864097254333,
+    "GRAVE": 7.424421883812747,
+    "MORTAL": 31.85359951603146
+  },
+  "columnas_matriz": 54
+}
