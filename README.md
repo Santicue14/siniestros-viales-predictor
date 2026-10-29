@@ -8,6 +8,7 @@ La pregunta es si un siniestro vial ya ocurrido en la Ciudad de Buenos Aires fue
 
 El informe escrito está en estos dos archivos:
 
+- [docs/BaldiniCuevas_Santiago_BI.pdf](docs/BaldiniCuevas_Santiago_BI.pdf). Es el documento entregable que cumple con la consigna del trabajo
 - [docs/BaldiniCuevas_Santiago_BI.docx](docs/BaldiniCuevas_Santiago_BI.docx). Es el documento para leer y editar: carátula, abstract, estado del arte, ejecución, conclusiones, problemas y líneas futuras.
 - [docs/Clasificación de Siniestros Viales CABA 2019-2025.pdf](<docs/Clasificación de Siniestros Viales CABA 2019-2025.pdf>). Es la versión en PDF del mismo trabajo, 17 páginas.
 
