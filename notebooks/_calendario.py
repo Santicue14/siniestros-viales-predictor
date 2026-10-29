@@ -170,8 +170,6 @@ def main():
 
     fer = corte("corte_feriado")
     sem = corte("corte_semana")
-    fer.to_csv(DATA / "feriado_vs_normal_por_anio.csv", index=False, encoding="utf-8-sig")
-    sem.to_csv(DATA / "finde_vs_semana_por_anio.csv", index=False, encoding="utf-8-sig")
     print("\nFeriado vs normal, hechos por día")
     print(fer.pivot(index="anio", columns="corte_feriado", values="hechos_por_dia").round(2).to_string())
     print("\nFinde vs semana, hechos por día")

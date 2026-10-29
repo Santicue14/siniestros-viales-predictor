@@ -12,7 +12,7 @@ El dataset de la cursada, si este mismo archivo se usó como ejemplo en clase, n
 
 ## Por qué esta base
 
-Se usa el CSV de **hechos** del Observatorio de Movilidad y Seguridad Vial de la Ciudad de Buenos Aires. Una fila es un siniestro. Cubre del 1/1/2019 al 31/12/2025, pesa 12.198.322 bytes y el portal lo actualizó el 29/06/2026.
+El único dataset de siniestros es `data/siniestros_viales_hechos.csv`. Es la copia original del portal y no se modifica. Una fila es un siniestro. Cubre del 1/1/2019 al 31/12/2025, pesa 12.198.322 bytes y el portal lo actualizó el 29/06/2026. `data/siniestros_hechos_limpio.csv` es ese mismo archivo después de la limpieza. No es otra base. El inventario está en `data/ORIGEN.txt`.
 
 | Recurso | Dónde está |
 | --- | --- |

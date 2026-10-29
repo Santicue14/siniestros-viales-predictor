@@ -1,18 +1,42 @@
+El único dataset de siniestros es el archivo original del portal.
+El resto de esta carpeta sale de ese archivo, o es una tabla auxiliar. No hay una segunda base.
+
+DATASET ORIGINAL
+Archivo: siniestros_viales_hechos.csv
 Fuente: Observatorio de Movilidad y Seguridad Vial, Gobierno de la Ciudad de Buenos Aires.
 Ficha: https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales
+URL: https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/victimas-siniestros-viales/siniestros_viales_hechos.csv
 Descargado el 26/10/2026.
-
-Hechos (una fila por siniestro, 2019-2025)
-https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/victimas-siniestros-viales/siniestros_viales_hechos.csv
-Archivo: siniestros_viales_hechos.csv
-Tamaño: 12198322 bytes
-Last-Modified informado por el servidor: Mon, 29 Jun 2026 15:12:35 GMT
+Tamaño: 12198322 bytes.
+Last-Modified informado por el servidor: Mon, 29 Jun 2026 15:12:35 GMT.
 Separador: punto y coma. Codificación: UTF-8.
+Una fila es un siniestro, de 2019 a 2025. Este archivo no se modifica.
 
-Notas metodológicas
-https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/victimas-siniestros-viales/NOTAS_SINIESTROS_VIALES_2019-2025.pdf
+DERIVADO DEL ORIGINAL
+Archivo: siniestros_hechos_limpio.csv
+Lo escribe notebooks/01_eda_limpieza.ipynb a partir del original.
+Misma cantidad de filas, 65.818, con los textos unificados. No es otra base.
+Lo leen el preprocesado, los modelos y el calendario.
+
+NOTAS DE LA MISMA FICHA
 Archivo: NOTAS_SINIESTROS_VIALES_2019-2025.pdf
-Tamaño: 126813 bytes
+URL: https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/victimas-siniestros-viales/NOTAS_SINIESTROS_VIALES_2019-2025.pdf
+Tamaño: 126813 bytes.
+Definen mortal, grave y leve. No son una tabla de hechos.
 
-El CSV de víctimas (edad y sexo) no se usa en esta etapa.
+TABLAS AUXILIARES, NO SON EL DATASET
+feriados_2021.json a feriados_2025.json
+    Respuesta de https://api.argentinadatos.com/v1/feriados/{año}. 2019 y 2020 no están en esa API.
+feriados_nacionales_2019-2025.csv
+    Lista usada para marcar cada fecha. La arma notebooks/_calendario.py.
+calendario_por_anio.csv
+    Hechos y tasa por año, según día de semana, fin de semana o feriado.
+feriados_por_nombre.csv
+    Tasa de cada feriado entre 2019 y 2025.
+data/preprocesado/
+    Matriz, pesos y modelos. Salida de las notebooks 02 y 03. No es un dataset.
+
+NO ESTÁ EN ESTA CARPETA
+El CSV de víctimas de la misma ficha, con edad y sexo, no se descargó.
 https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/victimas-siniestros-viales/siniestros_viales_victimas.csv
+Pesa 4,1 MB y no entra en el modelo.
